@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件三要素</title>
+</head>
+
+<body>
+    <!--上一章学到了如何获取元素接下来简单操作元素走起-->
+    <button class="btn">点我试试?</button>
+    <script>
+        //事件:被JavaScript侦测到的行为 触发-->响应事件 包含
+        //事件三要素 获取事件源  (注册)绑定事件  执行函数(程序)
+        //1获取到事件源并赋值给变量btn
+        //2btn.onclick就是第二步的说的绑定为事件绑定一个单击事件
+        //3简化函数体赋值给绑定后的事件(事件被触发会有什么变化) 
+        var btn = document.querySelector('.btn')
+        btn.onclick = () => {    
+            alert('啊~我被击中了')
+        }
+    </script>
+</body>
+
+</html>

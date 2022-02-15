@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom基础操作</title>
+</head>
+<body>
+    <div id="time">2020-01-16 19:24</div>  <!--定义id名为time的盒子一个-->
+    <div class="box">我是盒子one</div>      <!--定义类名为box的两个盒子-->
+    <div class="box">我是盒子two</div>
+    <ul>
+        <li>我在红尘等你</li>    <!--我们要想同时获取li标签内的元素呢？总不能每个li标签都给他定义一个id吧！-->
+        <li>九幽等你</li>
+        <li>守繁华之外</li>
+    </ul>
+    <ol id="ol">
+        <li>提笔在画西游</li>
+        <li>山外青山楼外楼</li>
+    </ol>
+    <script>
+        //Dom接口之获取元素document.getElementById
+        //通过id名获取元素先找到文档document.getElementById()
+        //直译为文档获取元素通过Id 参数字符串类型的id号
+        //返回Document的元素对象 对象里包含元素和方法我们以后要用的
+        var timer = document.getElementById('time')  //获取元素后默认在当前Document页面打印内容
+        console.log(timer)  //控制台打印与否无所谓
+/*---------------------------------------------------------------------------------------------------------------*/
+        //Dom接口之获取方法document.getElemenstByClassName()
+        //根据类名获取元素返回伪数组 
+        var box = document.getElementsByClassName('box')
+        console.log(box)
+/*---------------------------------------------------------------------------------------------------------------*/
+        //Dom接口之获取元素document.getElementsByTagName()
+        //通过标签名获取元素，参数跟字符串类型的标签名
+        //返回带有指定标签名的元素对象集合 类型为伪数组
+        //伪数组 不含方法的数组可正常通过index下标获取其元素
+        //若HTML里面没有li标签返回一个空的伪数组
+        var lis = document.getElementsByTagName('li') 
+        console.log(lis[0])     //打印伪数组里的第一个元素
+        console.log(typeof lis) //类型为对象
+        for (let i = 0; i < lis.length; i++) {  //获取后循环打印到控制台
+            console.log(lis[i])
+        }
+/*---------------------------------------------------------------------------------------------------------------*/
+        //Dom接口之获取元素element.getElementsByTagName() 注意父元素必须是指定的单个元素
+        //针对上面案例假设说还有一个<ol>的li呢计算机也不知道我们要获取的是具体谁的li啊？
+        //第二种方法 父级元素指向子级元素获取元素element.getElementsByTagName() 给父元素定义个ID就好了
+        var ol = document.getElementById('ol') //第一步通过document.getElementById取到父元素
+        var ol = ol.getElementsByTagName('li') //第二步通过element.getElementsByTagName()取到子元素
+        console.log(ol) 
+        console.log(ol[0])
+        //只返回子元素对象，不包含父元素
+/*---------------------------------------------------------------------------------------------------------------*/
+        console.log('\n');
+        console.log('\n');
+        console.log('\n');
+        //Dom接口之万能选择器document.querySelect()&document.querySelectAll()前者返回第一个后者返回全部
+        var lis = document.querySelectorAll('li') //返回文档中所有的li元素并赋值给变量lis
+        console.log(lis);
+        var firstBox = document.querySelector('.box') //返回文档中的第一个类名为.box的元素
+        console.log(firstBox);
+        var ID = document.querySelector('#time')      //返回文档中的第一个id名为time的元素
+        console.log(ID);
+/*---------------------------------------------------------------------------------------------------------------*/
+        //Dom接口之获取<body>&<html>
+        var bodyEle = document.body
+        var htmlEle = document.documentElement
+        console.log(bodyEle + '\n' + htmlEle)
+        console.dir(bodyEle + '\n' + htmlEle)
+
+
+    </script>
+</body>
+</html>

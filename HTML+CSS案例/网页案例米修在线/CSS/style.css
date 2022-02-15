@@ -1,0 +1,198 @@
+* {
+    /*reset*/
+    margin: 0;
+    padding: 0;
+    /*针对设置padding内边距的为全局设置box-sizing:border-box内边距就不会撑大盒子*/
+    box-sizing: border-box;
+}
+
+html,
+body {
+    /*设置全局的字体和行高*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+}
+
+p {
+    /*设置所有p标签的y轴外边距*/
+    margin: 10px 0;
+}
+
+
+/*usually class*/
+
+.container {
+    max-width: 1100px;
+    overflow: hidden;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+li,
+a {
+    /*取消li的点和a的下划线*/
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/*navbar*/
+
+#navbar {
+    height: 65px;
+    background-color: #2d2d2d;
+}
+
+#navbar h1 a {
+    float: left;
+    /*设置a标签外边距和文字垂直居中效果*/
+    margin-left: 80px;
+    line-height: 65px;
+    color: blanchedalmond;
+    padding: 0 20px;
+}
+
+#navbar ul li a {
+    float: right;
+    line-height: 65px;
+    color: blanchedalmond;
+    padding: 0 22px;
+}
+
+#navbar ul {
+    margin-right: 80px;
+}
+
+#navbar a:hover {
+    background-color: #444;
+    color: coral;
+}
+
+.btn:hover {
+    background-color: #444;
+    color: coral;
+}
+
+
+/*showcase*/
+
+#showcase {
+    height: 600px;
+    background: url(../images/bodylog.jpg) no-repeat center/cover;
+}
+
+#showcase .showcase-content {
+    color: #fff;
+    text-align: center;
+    padding-top: 140px;
+}
+
+.showcase-content h1 {
+    font-size: 60px;
+    line-height: 1.2em;
+}
+
+.showcase-content p {
+    font-size: 20px;
+    line-height: 1.7em;
+    padding: 15px;
+}
+
+.btn {
+    font-size: 18px;
+    width: 130px;
+    display: inline-block;
+    color: blanchedalmond;
+    padding: 13px 20px;
+    background-color: #333;
+}
+
+.btn-light {
+    background-color: #fff;
+    color: #333;
+    font-weight: 8 00px;
+}
+
+.text-primary {
+    color: chocolate;
+}
+
+
+/*home-info*/
+
+#home-info {
+    height: 400px;
+}
+
+#home-info .info-img {
+    float: left;
+    width: 50%;
+    height: 100%;
+    /*两边有缝隙时给cover*/
+    background: url(../images/home-img.png) no-repeat center/cover;
+}
+
+#home-info .info-content {
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: #444446;
+    text-align: center;
+    color: #fff;
+    /*padding-top直接解决内容距离盒子的顶部距离很方便*/
+    padding: 100px 60px 50px;
+    overflow: hidden;
+}
+
+.info-content p {
+    font-size: 16px;
+    margin: 30px 0;
+}
+
+.info-content h2 {
+    font-size: 34px;
+}
+
+
+/*introduce*/
+
+#introduce .box {
+    float: left;
+    width: 33.3%;
+    height: 400px;
+    padding: 90px 80px;
+    text-align: center;
+    border-color: #f4f4f4;
+}
+
+.boxlast {
+    margin-right: 0;
+}
+
+#introduce .box a {
+    color: #000000;
+}
+
+.box:hover {
+    background-color: rgba(245, 181, 42, 0.979);
+    box-shadow: 1px 2px 10px 1px rgb(138, 121, 121);
+}
+
+i {
+    margin-bottom: 15px;
+}
+
+
+/*main-footer*/
+
+.main-footer {
+    background-color: #2d2d2d;
+    padding: 20px;
+    text-align: center;
+    color: #f4f4f4;
+    font-size: 15px;
+}

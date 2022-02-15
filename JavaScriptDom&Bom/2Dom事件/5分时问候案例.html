@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different greeting at different times </title>
+    <style>
+        /*Set the greeting images size to be consistent*/
+        img{width: 600px;
+            height: 600px;}
+    </style>
+</head>
+<body>
+    <!--Create title and img at different times-->
+    <h3 id="BT"></h3> 
+    <img src="" title="">  
+
+    <script>
+        var bt = document.querySelector('#BT')
+        var greetingImages = document.querySelector('img')
+        var time = new Date()
+        var h = time.getHours()
+        if(12 < h && h < 18){
+            bt.innerHTML = '宇哥下午好'
+            greetingImages.src = 'images/afternoon.gif'
+            greetingImages.title = '下午'
+        }else if(h < 12 && h > 6){ 
+            bt.innerHTML = '宇哥上午好'
+            greetingImages.src = 'images/morning.gif'
+            greetingImages.title = '上午'
+        }else{
+            bt.innerHTML = '宇哥晚上好'
+            greetingImages.src = 'images/night.gif'
+            greetingImages.title = '晚上'
+        }
+    </script>
+</body>
+</html>

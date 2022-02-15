@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: darkred;
+        }
+        img {width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            box-shadow: 10px 10px 3px 10px;
+            float: none;
+         }
+
+         button{
+             background-color: plum;
+             margin:0 0 20px 67px ;
+         }
+    </style>
+</head>
+<body>
+    <button class="ldh">刘德华</button>
+    <button class="zy">张宇</button><br>
+    <img src="images/ldh.jpg" title="">
+
+    <script>
+        //Get element of two buttons and a box
+        var ldh = document.querySelector('.ldh')
+        var zy = document.querySelector('.zy')
+        var imgs = document.querySelector('img')
+        //click the button change elements between ldh and zy images
+        zy.onclick = () => {
+            imgs.src = 'images/zy.gif'
+            imgs.setAttribute('title', '哈哈低调老弟！！！')
+        }
+
+        ldh.onclick = () => {
+            imgs.src = 'images/ldh.jpg'
+            imgs.setAttribute('title', '德华:“别捧我我没张宇帅”')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+/*---------------------------------------------一些综合的设置-----------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+    background-color: #f3f5f7;
+}
+
+.w {
+    /*这是版心的尺寸*/
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.w:after {
+    /*集体清除浮动*/
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+a,
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/*---------------------------------------------第一行header设置整体宽高-----------------------------------------------*/
+
+.header {
+    height: 42px;
+    margin: 30px auto;
+}
+
+.header .logo {
+    /*第一列logo部分*/
+    float: left;
+    margin-right: 52px;
+    width: 200px;
+    height: 42px;
+}
+
+.nav ul li {
+    /*第二列nav导航栏部分*/
+    float: left;
+}
+
+.nav li a {
+    /*li标签只设置一个浮动即可，剩余的全部给a标签前提将a转为块级元素，在设置高度行高左右内边距*/
+    display: block;
+    padding: 0 22px;
+    height: 38px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+}
+
+.nav li a:hover {
+    color: #00a4ff;
+    border-bottom: 2px solid #00a4ff;
+}
+
+.search {
+    /*第三列搜索框部分设置最外层盒子的宽高浮动，在设置里面的内容部分*/
+    float: left;
+    margin-left: 70px;
+    width: 412px;
+    height: 42px;
+}
+
+.search input {
+    float: left;
+    padding-left: 20px;
+    width: 360px;
+    height: 42px;
+    border: 1px solid #00a4ff;
+    border-right: 0;
+    font-size: 14px;
+    color: #cececf;
+}
+
+.search button {
+    width: 50px;
+    height: 42px;
+    background: url(images/search.png);
+    border: 0;
+}
+
+.user {
+    /*第四列用户部分*/
+    float: right;
+    margin-right: 40px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+/*---------------------------------------------第二行banner的设置-----------------------------------------------*/
+
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+}
+
+.banner .intorduce {
+    background: url(images/banner2.png) no-repeat top center;
+}
+
+
+/*第二行第一列左侧导航栏*/
+
+.banner .subnav {
+    float: left;
+    width: 190px;
+    height: 420px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.subnav li a {
+    display: block;
+    /*如果li标签里面的a是竖着的就设置宽高行高属性对齐，横着的话就设置高度行高内边距*/
+    height: 46.7px;
+    font: 580 14px/46.7px '微软雅黑';
+    color: #f3f5f7;
+    padding: 0 30px;
+}
+
+.subnav li span {
+    float: right;
+}
+
+.subnav li a:hover {
+    background-color: #00a4ff;
+    text-shadow: 3px 3px 3px gray;
+    color: black;
+}
+
+
+/*第二行第二列classtable课程表*/
+
+.classtable {
+    float: right;
+    margin-top: 50px;
+    width: 230px;
+    height: 300px;
+    background-color: #fff;
+}
+
+.classtable h2 {
+    height: 50px;
+    background-color: #9bceea;
+    font: 600 18px/50px '微软雅黑';
+    text-align: center;
+    color: #fff;
+}
+
+.classtable .bd {
+    padding: 0 20px;
+}
+
+.classtable .bd li {
+    height: 66px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.classtable .bd li h4 {
+    font-size: 16px;
+    color: #4e4e4e;
+}
+
+.classtable .bd li p {
+    font-size: 12px;
+    color: gray;
+}
+
+.classtable .bd .more {
+    display: block;
+    margin-top: 6px;
+    text-align: center;
+    line-height: 38px;
+    border: 1px solid #00a4ff;
+    color: #00a4ff;
+    font-weight: 700;
+}
+
+
+/*---------------------------------------------第三行goods的设置-----------------------------------------------*/
+
+.goods {
+    /*第一列精品推荐木块*/
+    height: 60px;
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 18px 0;
+    box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.3);
+}
+
+.goods h3 {
+    float: left;
+    margin: 0 35px;
+    font-size: 16px;
+    color: #00a4ff;
+}
+
+.goods ul li {
+    float: left;
+    margin-top: 2px;
+    font: 450 16px '微软雅黑';
+}
+
+.goods li a {
+    padding: 0 35px;
+    color: #050505;
+    border-left: 1px solid #ccc;
+}
+
+.goods .mod {
+    float: right;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #00a4ff;
+}
+
+
+/*---------------------------------------------第四行moduleone的设置---------------------------------------------*/
+
+.top {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height: 38px;
+}
+
+.topleft {
+    float: left;
+    margin-right: 320px;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.topright {
+    float: right;
+    font-size: 14px;
+    color: #ccc;
+    margin: 5px 30px 0 0;
+}
+
+.text-primary li {
+    float: left;
+    padding: 0 36px;
+    font: 16px '微软雅黑';
+}
+
+.text-primary li a {
+    color: #a7a8a9;
+}
+
+.text-primary li a:hover {
+    color: #00a4ff;
+}
+
+.text-ul li {
+    /*父相对定位*/
+    position: relative;
+    float: left;
+    margin: 0 12.5px 15px 0;
+    width: 230px;
+    height: 270px;
+    background-color: #fff;
+}
+
+.text-ul li em {
+    /*子绝对定位*/
+    position: absolute;
+    top: 4px;
+    /*负数可以出去*/
+    right: -7.5px;
+}
+
+.text-ul .rightclear {
+    margin-right: 0;
+}
+
+.text-ul li>img {
+    width: 100%;
+    height: 155px;
+}
+
+.text-ul li p {
+    padding: 10px 24px;
+    font: 520 14px '微软雅黑';
+}
+
+.text-ul li .calssification {
+    color: orangered;
+}
+
+.text-ul li .calssification span {
+    color: #ccc;
+}
+
+
+/*---------------------------------------------第五行moduletwo的设置---------------------------------------------*/
+
+.moduletwo .subnav {
+    float: left;
+    width: 230px;
+    height: 395px;
+}
+
+.moduletwo .content {
+    float: right;
+    width: 958px;
+    height: 395px;
+}
+
+.moduletwo .content ul {
+    margin-top: 14px;
+}
+
+
+/*---------------------------------------------footer---------------------------------------------*/
+
+footer {
+    margin-top: 20px;
+    height: 330px;
+    background-color: #fff;
+}
+
+footer .left {
+    float: left;
+    width: 430px;
+    height: 300px;
+    margin: 40px 0 0 0;
+}
+
+footer .left p {
+    margin-top: 13px;
+    font-size: 12px;
+    color: #666666;
+}
+
+footer .left a {
+    display: block;
+    width: 120px;
+    height: 35px;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    border: 2px solid #00a4ff;
+    color: #00a4ff;
+}
+
+footer dl {
+    float: right;
+    padding: 35px 70px 0;
+}
+
+footer dt {
+    font: 600 16px '微软雅黑';
+    margin-bottom: 15px;
+}
+
+footer dd {
+    font: 400 12px '微软雅黑';
+    line-height: 25px;
+}
+
+
+/*---------------------------------------------fixed---------------------------------------------*/

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作事件</title>
+    <style>
+        #神爱世人{border: 5px solid black;
+                width: 70px;
+                background-color: chartreuse;
+                margin: 0 auto;
+            }
+    </style>
+</head>
+<body>
+    <div id="神爱世人">神爱世人</div> <!--定义名id名为神爱世人的盒子-->
+    <script>
+        //获取元素
+        var division = document.querySelector('#神爱世人')
+        division.onclick = () => {
+            division.innerHTML = '我敬畏神'
+        }
+    </script>
+</body>
+</html>

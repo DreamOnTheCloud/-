@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /*padding属性改变盒子内容相对盒子的内边缘的距离
+              但是注意只要盒子设置了宽高就会撑大盒子，解决方案在宽高上减去即可
+              上下左右各20:高(上下) - 40 ， 宽(左右) - 40
+              */
+            padding: 20px;
+            /*解决了内边距与边框加宽的bug*/
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>
+            提笔在画西游,山外青山楼外楼,多少次再回头，却忘不掉你温柔，下凡寻意中人，五百年前一座坟，不服仙也不服神，却留不住的的魂
+        </p>
+    </div>
+</body>
+
+</html>

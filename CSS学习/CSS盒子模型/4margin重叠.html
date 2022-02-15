@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding-top: 0;
+        }
+
+        /*他们上下之间的margin应该有80px + 70px = 150px 的但是只有80px这就是外边距重叠问题*/
+        .a {
+            background-color: red;
+            margin-bottom: 80px;
+        }
+
+        .b {
+            background-color: royalblue;
+            margin-top: 70px;
+        }
+
+        /*解决方案:在两个盒子之间添加第三个盒子并未第三个盒子设置像素为1px的透明边框
+          此时他们两个盒子的外边距就是70px + 80px + 1px =151
+        */
+        .解决边缘重叠 {
+            border: 1px solid transparent;
+        }
+
+        .a,
+        .b {
+            width: 1000px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a"></div>
+    <div class="解决边缘重叠"></div>
+    <div class="b"></div>
+</body>
+
+</html>

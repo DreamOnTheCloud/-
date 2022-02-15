@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background</title>
+    <style>
+        div {
+            background-color: #000;
+            width: 300px;
+            height: 300px;
+            /*图片背景便于调整位置background:url(加图片地址) 默认是平铺的*/
+            background-image: url(images/beijing.png);
+            /*设置为不平铺no-repeat 平铺repeat x轴平铺repeat-x y轴平铺repeat-y*/
+            background-repeat: no-repeat;
+            /*背景位置很重要用于定位背景图片的方位名词定位无先后顺序top center bottom left certer right*/
+            background-position: center;
+            /*也可以精确定位背景图片第一个参数为x轴第二个为y轴*/
+            background-position: 50px 50px;
+        }
+
+        h3 {
+            width: 118px;
+            height: 41px;
+            font: 480 14px '微软雅黑';
+            line-height: 41px;
+            /*插入 平铺 位置即可ok*/
+            background-image: url(images/inca.png);
+            background-repeat: no-repeat;
+            background-position: left;
+            padding-left: 22px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--background-image背景图片非常便于控制其位置，实际开发者用于一些logo小图片或者是超大背景图片-->
+    <div></div>
+    <h3>成长守护平台</h3>
+</body>
+
+</html>

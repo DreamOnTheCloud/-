@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <!--表单可谓是我们HTML里必不可少的一部分:注册登录收集信息之类的无处不在
+    1表单域 作用:收集信息提交给后台服务器的Repository
+    2控件
+    3提示信息
+    -->
+··· <ul>
+        <li><strong>url地址即是用于接收和处理表单信息的服务器地址</strong></li>
+        <li><strong>method用于设置表单的提交方式post 和 get</strong></li>
+        <li><strong>name用于指定表单的名称，区分一个页面的多个表单</strong></li>
+    </ul>
+    <form action="url地址" method="提交方式" name="表单域名称">
+        <!--input输入表单向里面输入-->
+        <!--test文本框最多输入六个值-->
+        用户名:<input type="text" maxlength="6"> <br>
+        <!--password密码框用户看不到-->
+        密码: <input type="password"> <br>
+        <!--radio单选框必须有相同的name值 value的值为框子里的值 单选多选可设置默认值checked-->
+        婚姻状况: 男<input type="radio" name="sex"> 女<input type="radio" name="sex" checked><br>
+        <!--checkbox多选框必须有相同的name值-->
+        兴趣爱好: 敲代码<input type="checkbox" name="hobby"> 打游戏<input type="checkbox" name="hobby"><br>
+        <!--submit提交按钮点击了提交即可把我们输入的各种信息交给后台人员-->
+        <input type="submit" value="点击注册"><br>
+        <!--reset重置按钮还原表单的初始状态-->
+        <input type="reset" value="重新填写"><br>
+        <!--button普通按钮-->
+        <input type="button" value="普通按钮后期搭配js使用"><br>
+        <!--file提交文件按钮点击打开文件-->
+        <input type="file" value="上传头像"><br><br><br>
+
+        <!--lable标签搭配单选框的使用技巧 作用:选择面积变大-->
+        <!--让lable里面的for等于表单的id lable里的值即可选中表单-->
+        婚姻状态:
+        <input type="radio" name="tp" id="wh"><label for="wh">未婚</label>
+        <input type="radio" name="tp" id="yh"><label for="yh">已婚</label>
+        <input type="radio" name="tp" id="so"><label for="so">丧偶</label>
+
+        <!--Select下拉表单的应用option里面写值selected默认选中-->
+        籍贯:
+        <select>
+            <option>山东</option>
+            <option>河北</option>
+            <option>河南</option>
+        </select>
+        <br><br>
+        <!--textarea文本域写好几行用于留言评论等 cols-->
+        评论区:<br>
+        <textarea cols="30" rows="10">
+            请注意言辞
+        </textarea>
+
+
+    </form>
+</body>
+
+</html>

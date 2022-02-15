@@ -1,0 +1,25 @@
+
+
+
+【简单数据类型 也叫值数据类型】 String boolean number null undefined
+
+【复杂数据类型 也叫引用数据类】 Object Arrar 
+
+【栈】
+    存放简单数据类型
+    String boolean number null undefined
+    直接存放值
+
+【堆】
+    存放复杂数据类型
+    生成16位地址存到栈里面
+    然后生成的地址指向堆里面的值
+    假设 var arr = new Arrar(1,2,3);
+    或者 var arr = [1,2,3]
+
+    原理:
+    1，将变量名arr生成16进制的地址存到栈内存
+    2，在将地址里对应的元素1 2 3 存到堆内存
+    3，通过数组名指向栈内存的地址 地址在指向堆内存的数据去获取具体的值
+
+    

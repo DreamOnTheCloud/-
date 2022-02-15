@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 260px;
+            height: 260px;
+            background-color: blueviolet;
+            /*为父盒子添加overflow:hidden*/
+            /*解决外边距塌陷问题方案1 为父盒子设置内边距再减去相应的值即可*/
+            overflow: hidden;
+        }
+
+
+        .father div {
+            width: 150px;
+            height: 150px;
+            background-color: rgb(28, 208, 221);
+            /*测试margin结果塌陷 测试padding失败*/
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div>son</div>
+    </div>
+</body>
+
+</html>

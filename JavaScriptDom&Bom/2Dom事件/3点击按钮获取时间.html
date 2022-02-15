@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <style>
+        #DivisionTime ,
+        p {
+            width: 320px;
+            background-color: pink;
+            border: plum 2px solid;
+            height: 25px;
+            margin: 10px 0;
+            text-align: center; 
+        }
+    </style>
+</head>
+
+<body>
+    <!--定义按钮一个-->
+    <button class="time">点击获取时间</button>
+    <!--定义盒子两个 一个用于点击获取时间 一个用于直接获取时间-->
+    <div id="DivisionTime">点击获取时间</div>
+    <p>页面刷新直接获取时间</p>
+    <script>
+        //获取按钮与盒子元素
+        var button = document.querySelector('.time')
+        var div = document.querySelector('#DivisionTime')
+        //绑定点击事件
+        button.onclick = () => {
+            div.innerHTML = getDate()  //将函数的返回值结果赋值给选中的元素
+        }
+        //获取当前时间函数
+        function getDate() {
+            var timer = new Date()  //创建日期对象timer并获取它的年月日时分秒赋值给相应的数据
+            var year = timer.getFullYear()
+            var month = (timer.getMonth() + 1)
+            var dates = timer.getDate()
+            var day = timer.getDay()
+            var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+            var h = timer.getHours()
+            h = h > 9 ? h : ('0' + h)
+            var m = timer.getMinutes()
+            m = m > 9 ? m : ('0' + m)
+            var s = timer.getSeconds()
+            s = s > 9 ? s : ('0' + s)
+            return '今天是' + year + '年' + month + '月' + dates + '日' + h + ':' + m + ':' + s + arr[day]
+        }
+
+            var p = document.querySelector('p')
+            p.innerHTML = getDate()
+
+
+    </script>
+</body>
+
+</html>
