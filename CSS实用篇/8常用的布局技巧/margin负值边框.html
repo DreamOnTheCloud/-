@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            position: relative;
+            /*每个盒子四条1px红色边框且都浮动到最左侧
+            然而第一个li的右侧边框 = 本身右侧边框 + 第二个li的左侧边框 = 2px */
+            float: left;
+            list-style: none;
+            width: 250px;
+            height: 250px;
+            border: 4px solid red;
+            /*解决方案:
+            为每个li加上左侧margin-left:-4px 的值挤进去一个边框的值(不是删除)*/
+            margin-left: -4px;
+        }
+        
+        li:hover {
+            /*然而有出现了一个问题:我们鼠标移动更换边框颜色时有一条边框是被压着的换不了
+            解决方案:
+            1如果li盒子没有用相对定位为的话就直接设置position:relative;提高层级
+            2如果li盒子用到了相对定位的话我们就直接z-index设置为1提高层级
+            注意:为社么不用绝对定位和固定定位呢?它们也能提高层级啊
+            因为设置的话不在占有原位置后面的盒子直接过来就乱套了
+            */
+            border: 4px solid greenyellow;
+            /* position: relative; */
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  问题引入:
+        盒子加上边框和浮动的话,第一个盒子加第二个盒子就是两个盒子的px值
+        而我们只需要一个盒子的边框显示效果,这时我们用到外边距的负值使外侧盒子-1挤过去 -->
+    <div class="ul">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </div>
+</body>
+
+</html>

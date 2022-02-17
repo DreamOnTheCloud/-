@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triangle</title>
+    <style>
+        .outbox {
+            position: relative;
+            width: 200px;
+            height: 400px;
+            background-color: aquamarine;
+            margin: 150px auto;
+        }
+        
+        .triangle {
+            /*init set*/
+            width: 0;
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+            /*set the border*/
+            border: 10px solid transparent;
+            /*set of you want the side color*/
+            border-bottom-color: aquamarine;
+            /*set position*/
+            position: absolute;
+            right: 15px;
+            top: -20px;
+        }
+        
+        .outboxtwo {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            background-color: black;
+        }
+        
+        .triangletwo {
+            position: absolute;
+            top: 15px;
+            right: -20px;
+            width: 0;
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+            border: 10px solid transparent;
+            border-left-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outbox">
+        <div class="triangle">
+
+        </div>
+    </div>
+
+    <div class="outboxtwo">
+        <div class="triangletwo">
+
+        </div>
+    </div>
+</body>
+
+</html>

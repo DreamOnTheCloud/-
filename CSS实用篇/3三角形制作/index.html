@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triangle</title>
+    <style>
+        /*核心原理:
+                defined a box，Seting the width and height are zero
+                defiend border size(triangle size),defined color are transparent
+                change a side are want color
+        */
+        
+        .triangle {
+            /*init seting*/
+            margin: 180px auto;
+            width: 0;
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+            /*defined four sides*/
+            border: 100px solid transparent;
+            /*定义指定边框颜色，注意实战时要用absolute定义其位置*/
+            border-bottom-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="triangle"></div>
+</body>
+
+</html>

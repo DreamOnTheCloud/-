@@ -7,29 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .father {
-            width: 260px;
-            height: 260px;
-            background-color: blueviolet;
-            /*为父盒子添加overflow:hidden*/
-            /*解决外边距塌陷问题方案1 为父盒子设置内边距再减去相应的值即可*/
-            overflow: hidden;
+        .triangle {
+            width: 200px;
+            height: 30px;
+            border: 1px solid red;
+            margin: 300px auto;
+            /*设置垂直水平居中的效果*/
+            text-align: center;
         }
-
-
-        .father div {
-            width: 150px;
-            height: 150px;
-            background-color: rgb(28, 208, 221);
-            /*测试margin结果塌陷 测试padding失败*/
-            margin: 50px;
+        
+        span {
+            float: left;
+            width: 100px;
+            height: 100%;
+        }
+        /*设置左边红色部分*/
+        
+        .left {
+            /* 设置定位将梯形定位到盒子的最右侧 */
+            position: relative;
+            background-color: red;
+            font: 600 16px/2 '微软雅黑';
+        }
+        
+        .left i {
+            /*设置梯形的属性默认值*/
+            display: inline-block;
+            width: 0;
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+            /*设置为梯形方向朝右侧*/
+            border-color: transparent #FFF transparent transparent;
+            border-style: solid;
+            border-width: 30px 10px 0 0;
+            /*最后绝对定位设置盒子的位置完成*/
+            position: absolute;
+            right: 0;
+        }
+        
+        .content {
+            font-size: 14px;
+            color: #ccc;
+            text-decoration: line-through;
+            line-height: 35px;
         }
     </style>
 </head>
 
 <body>
-    <div class="father">
-        <div>son</div>
+    <div class="triangle">
+        <span class="left">￥1999
+            <i></i>
+        </span>
+        <span class="content">￥5999</span>
     </div>
 </body>
 

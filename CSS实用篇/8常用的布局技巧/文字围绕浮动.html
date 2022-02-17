@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text&float</title>
+    <style>
+        /*
+        核心原理:
+            利用盒子浮动不会压住文字的特性,浮动其中一盒子文字就会自定环绕
+            只需设置其边距即可  
+        */
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            margin: 180px auto;
+            padding: 5px;
+            width: 400px;
+            height: 130px;
+            border: 1px solid rebeccapurple;
+        }
+        
+        .pic {
+            float: left;
+            /*设置一点右边距拉开与文字距离*/
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="pic">
+            <!-- 盒子包含图片为盒子设置float -->
+            <img src="../../HTML+CSS案例/小米浮动/images/view3.png">
+        </div>
+        <!-- 文字部分直接用p标签包裹即可图片设置了浮动文字自动环绕 -->
+        <p>【震惊】国足踢上世界杯,绝杀c罗狂铲梅西 19 - 0 拿下巴西一战成名!!!</p>
+    </div>
+</body>
+
+</html>

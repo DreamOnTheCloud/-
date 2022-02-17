@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 以下盒子用的是一张图,这张图就是精灵图,web服务器只需发送一次这场图即可 */
+        
+        .logo {
+            margin: 50px auto;
+            /*盒子的宽高就是精灵图的宽高*/
+            width: 60px;
+            height: 60px;
+            background: url(images/sprites.png) no-repeat -184px 0;
+            /* 精灵图背景的xy轴位置 */
+        }
+        
+        .month {
+            height: 26px;
+            width: 26px;
+            background: url(images/sprites.png) no-repeat -157px -106px;
+            /* 精灵图背景的xy轴位置 */
+        }
+        
+        .money {
+            margin: 0px auto;
+            width: 20px;
+            height: 16px;
+            background: url(images/sprites.png) no-repeat -252px -88px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo"></div>
+    <div class="month"></div>
+    <div class="money"></div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical-align</title>
+    <link rel="stylesheet" href="../2字体图标/FontaWesome/CSS/font-awesome.min.css">
+    <style>
+        /*注意此属性只对行内元素与行内块元素生效*/
+        
+        img {
+            width: 300px;
+            height: 300px;
+            /*默认为基线对齐方式base  ,  下面我们设置为中线对齐方式*/
+            vertical-align: middle;
+        }
+        
+        .discription {
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            background-color: antiquewhite;
+            margin: 0 0 0 80px;
+            border-radius: 100px;
+            line-height: 50px;
+            font-size: 15px;
+            padding-left: 40px;
+            box-sizing: border-box;
+        }
+        
+        i {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 我们的文字有四条线 基线:base 底线:bottom 顶线:top 中线:middle -->
+    <img src="images/tudou.jpg">Vertical-align文字对齐 Textarea表单域 not-allowed禁止 cursor光标
+    <div class="discription">
+        <i class="fa fa-battery-full" aria-hidden="true"></i><span>小米官网制作</span>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梯形</title>
+    <style>
+        .box {
+            width: 180px;
+            height: 30px;
+            margin: 300px auto;
+            border: 1px solid red;
+            /*设置盒子里的内容为垂直水平居中*/
+            text-align: center;
+            line-height: 30px;
+        }
+        
+        .left {
+            position: relative;
+            /*添加浮动后的盒子默认转换为行内块元素所以能设置宽高*/
+            float: left;
+            width: 90px;
+            height: 100%;
+            background-color: red;
+            /*左侧价格字体设置*/
+            font: 700 16px/2 '微软雅黑';
+        }
+        
+        .left i {
+            /*设置梯形*/
+            display: inline-block;
+            width: 0;
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+            /*第二遍颜色一定是右侧的盒子颜色一样的这样才能显示出来梯形的效果*/
+            border-color: transparent #fff transparent transparent;
+            border-style: solid;
+            border-width: 30px 10px 0 0;
+            /*添加定位的话就不会影响盒里面其他内容的位置了做到最后一步在做决定*/
+            position: absolute;
+            right: 0;
+        }
+        
+        .right {
+            /*右侧文字设置*/
+            font: 100 14px '微软雅黑';
+            color: #ccc;
+            text-decoration: line-through;
+            padding-right: 30px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 三角形:设置宽高字体大小行高为0设置四条边框
+           梯形:设置宽高字体大小行高为零
+           上边框px为外盒子高度
+           下边框为0
+           右边框为适应即可
+           左边框为0-->
+    <div class="box">
+        <span class="left">￥1999
+            <i></i>
+        </span>
+
+        <span class="right">￥5999</span>
+    </div>
+</body>
+
+</html>

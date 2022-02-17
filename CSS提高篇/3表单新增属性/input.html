@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewInput</title>
+    <style>
+        input {
+            margin-left: 4px;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!--表单可谓是我们HTML里必不可少的一部分:注册登录收集信息之类的无处不在
+    1表单域 作用:收集信息提交给后台服务器的Repository
+    2控件
+    3提示信息
+    -->
+    <form action="" method="post" name="用于区分一个页面的多个表单">
+        <ul>
+            <li>邮箱:<input type="email"></li>
+            <li>网址:<input type="url"></li>
+            <li>日期: <input type="date"></li>
+            <li>时间:<input type="time"></li>
+            <li>数量:<input type="number"></li>
+            <li>搜索<input type="search"></li>
+            <li>颜色<input type="color"></li>
+            <li>号码:<input type="tel"> </li>
+            <li><input type="submit"></li>
+        </ul>
+        <table>
+            <tr>
+                <td>邮箱:</td>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <td>网址:</td>
+                <td><input type="url"></td>
+            </tr>
+            <tr>
+                <td>时间:</td>
+                <td><input type="time"></td>
+            </tr>
+            <tr>
+                <td>日期:</td>
+                <td><input type="date"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

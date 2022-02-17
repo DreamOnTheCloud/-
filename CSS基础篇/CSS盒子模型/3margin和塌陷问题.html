@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外边距margin</title>
+    <style>
+        /*因为浏览器默认会为不同元素自带一些边距为了更好的布局项目第一句代码清除内外边距*/
+        /*行内元素上下内外边距不生效但是左右生效*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*什么是塌陷:父盒子里面有子盒子，子盒子就是想下来
+        此时margin-top也不能让子盒子下来反而父盒子相对于浏览器带着儿子一起往下*/
+        div {
+            /*父亲定义overflow:hidden属性的话解决子盒子相对父盒子塌陷问题*/
+            overflow: hidden;
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+            /*margin居中条件:1必须有width2:必须是块元素，行内块元素都不行其余的居中用text-align:center*/
+            margin: 0px auto;
+            /*原理:上下为0左右自动*/
+
+        }
+
+        p {
+            margin-top: 100px;
+            width: 150px;
+            height: 150px;
+            background-color: purple;
+        }
+
+        .one {
+            background-color: seagreen;
+            /*上外边距表示与上面的盒子距离*/
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p></p>
+    </div>
+
+    <div class="one"></div>
+</body>
+
+</html>

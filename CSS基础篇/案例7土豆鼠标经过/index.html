@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tudou {
+            /* 父盒子绝对定位 */
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 100px auto;
+        }
+        
+        .tudou img {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .mask {
+            /* 默认隐藏遮罩层 */
+            display: none;
+            /* 子盒子相对定位 */
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5) url(images/next.png) no-repeat center;
+        }
+        
+        .tudou:hover .mask {
+            /* 鼠标经过遮罩层显示 */
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tudou">
+        <img src="images/tudou.jpg">
+        <div class="mask"></div>
+    </div>
+</body>
+
+</html>

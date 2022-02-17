@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的显示模式</title>
+    <style>
+        p,
+        div,
+        h2,
+        span,
+        ul li {
+            background-color: salmon;
+        }
+
+        /* 将span转换为块级元素 */
+        span {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 块级元素h1~h6 div p ol ul li等
+    特点:
+    比较霸道独占一行
+    宽高内外边距可以设置 即使宽度调了也是独占一行
+    宽度默认是容器(父级宽度的100%)
+    是一个容器里面可以放东西
+    文字类元素p h1~h1里面不可再放块级元素
+    -->
+    <p>paragraph</p>
+    <div>division</div>
+    <h2>h2</h2>
+    <ul>
+        <li>li</li>
+    </ul>
+    <!-- 行内元素a strong em i del s ins u span等
+    特点:
+    一行可以显示多个行内元素
+    宽度高度无法设置转display换后可设置
+    由内部元素的多少决定有多宽
+    只能容纳文本或其他行内元素(不可有块级元素) a可容纳块级元素
+    -->
+    <span>span<strong>strong<em>em</em></strong></span>
+
+    <!-- 行内块元素img td input等
+    特点:
+    一行可以显示多个行内元素且宽度高度可以设置 中间默认用空白隔离本身的宽度是他的默认宽度-->
+    <input type="text">
+    <input type="text">
+</body>
+
+</html>

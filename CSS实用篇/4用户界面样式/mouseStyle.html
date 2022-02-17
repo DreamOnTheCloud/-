@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            /* 设置表单选中没有线条 */
+            outline: none;
+        }
+        
+        textarea {
+            /*设置表单域禁止拖拽*/
+            outline: none;
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li style="cursor: default;">我是default默认鼠标箭头样式</li>
+        <li style="cursor: move;">我是move十字架移动样式</li>
+        <li style="cursor: text;">我是text文本选中样式</li>
+        <li style="cursor: pointer;">我是pointer小手抓取样式</li>
+        <li style="cursor:not-allowed">我是not-allowed禁止样式</li>
+    </ul>
+    <!-- 取消表单选中后的线条与表单域的线条和拖拽 -->
+    <input type="text">
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+</body>
+
+</html>

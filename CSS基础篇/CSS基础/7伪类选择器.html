@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>链接伪类</title>
+    <style>
+        /* 不做任何操作时的状态 */
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        /* 访问之后的颜色也就是鼠标点击过后的颜色 */
+        a:visited {
+            color: orange;
+        }
+
+        /* 鼠标悬停时的状态(最常用) */
+        a:hover {
+            color: red;
+        }
+
+        /* 鼠标按下时的状态 */
+        a:active {
+            color: royalblue;
+        }
+
+        /* focus伪类焦点选择器 */
+        input:focus {
+            background-color: salmon;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 什么时候的状态
+    a:link不做任何操作时的状态
+    a:visited被访问后的状态
+    a:hover鼠标悬停时的状态
+    a:active按下未弹起时的状态 -->
+    <a href="#">伪类选择器</a>
+
+    <!-- 伪类焦点选择器 focus主要针对表单input -->
+    <input type="text">
+    <input type="text">
+    <input type="text">
+
+</body>
+
+</html>

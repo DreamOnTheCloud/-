@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>权重</title>
+    <style>
+        .ten {
+
+            color: orange;
+        }
+
+        li {
+            color: pink;
+        }
+
+        /*明明父亲的权重为10 标签为1 为啥是pink色呢？ 因为继承过来的权重为0<1*/
+        .father li {
+            color: red;
+        }
+
+        /* 为啥还是红色呢因为是.father + li = 11 */
+        li {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="ten">
+        <li>权重之继承</li>
+        <li>权重之继承</li>
+        <li>权重之继承</li>
+        <li>权重之继承</li>
+        <li>权重之继承</li>
+    </ul>
+
+    <div class="father">
+        <ul>
+            <li>权重的叠加</li>
+            <li>权重的叠加</li>
+            <li>权重的叠加</li>
+            <li>权重的叠加</li>
+            <li>权重的叠加</li>
+        </ul>
+    </div>
+</body>
+
+</html>

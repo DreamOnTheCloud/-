@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            /*父盒子有边框的话即可使下面基本流的盒子不在占用子盒子的位置*/
+            border: 1px solid transparent;
+        }
+
+        .box1 {
+            float: left;
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+        }
+
+        .box2 {
+            float: left;
+            width: 150px;
+            height: 150px;
+            background-color: rgb(221, 20, 178);
+        }
+
+        /*如果父盒子未设置边框的话.out盒子将会被压在下面*/
+        .out {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+        }
+
+        /*用来清楚浮动*/
+        .box3 {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    <div class="out">
+
+    </div>
+
+</body>
+
+</html>

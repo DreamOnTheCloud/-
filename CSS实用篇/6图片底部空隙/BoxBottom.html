@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        border: 1px solid red;
+    }
+    
+    img {
+        /*注意:属性一定是给到盒子里面的元素，给谁谁对齐，给盒子本身是无效的
+        但要确定前提元素为行内元素或者是行内块级元素*/
+        vertical-align: middle;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <img src="manwang.jpg" width="200" height="200">
+    </div>
+
+</body>
+
+</html>

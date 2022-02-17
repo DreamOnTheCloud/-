@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prev&next</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            /*设置全体a的居中效果*/
+            text-align: center;
+            margin: 150px auto;
+        }
+        
+        .box a {
+            /*设置a盒子转换为行内块级元素，并设置宽高，背景颜色与边框*/
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            /*设置文字垂直居中对齐无下划线黑色*/
+            text-align: center;
+            line-height: 38px;
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+        
+        .box .prev,
+        .box .next {
+            /*设置上一页下一页的宽度否则盛不下盒子*/
+            width: 85px;
+        }
+        
+        .box .current {
+            /*设置第二个无边框颜色后期js设置点击那个那个没有*/
+            background-color: #fff;
+            border: #fff;
+        }
+        
+        .box input {
+            /*设置表单宽高*/
+            width: 65px;
+            height: 36px;
+            /*设置表单边框*/
+            border: 1px solid #ccc;
+            outline: none;
+            margin-right: 3px;
+        }
+        
+        .box button {
+            /*设置按钮宽高与边框背景颜色*/
+            width: 65px;
+            height: 36px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 行内块元素特性:
+            在一行显示且默认有一小块距离用于上一页下一页最合适不过了只需设置特别的宽度即可
+        布局:
+            一个大盒子包裹一堆行内块元素 转换行内元素a为行内块元素-->
+    <div class="box">
+        <a href="#" class="prev">&lt;&lt;上一页</a>
+        <a href="#">1</a>
+        <a href="#" class="current">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#" class="current">...</a>
+        <a href="#" class="next">&gt;&gt;下一页</a>
+        <!-- 收尾设置后面的一个表单一个按钮几个文字 -->
+        共10页到
+        <input type="text">页
+        <button>确定</button>
+    </div>
+</body>
+
+</html>

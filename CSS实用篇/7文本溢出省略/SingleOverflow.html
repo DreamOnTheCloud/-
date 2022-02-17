@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {
+            width: 200px;
+            height: 400px;
+            border: 1px solid #000;
+            /*记住了针对的盒子是包含文字的外层盒子别找他爷爷，否则省略号无用*/
+            /*第一步:强制超出文本不换行*/
+            white-space: nowrap;
+            /*第二步:隐藏超出文本*/
+            overflow: hidden;
+            /*第三步:超出的文本使用省略号代替*/
+            text-overflow: ellipsis;
+        }
+        
+        .two {
+            width: 200px;
+            height: 65px;
+            border: 1px solid #000;
+            /*多行文本溢出省略号*/
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /*设置为弹性盒子*/
+            display: -webkit-box;
+            /*-webkit-line-clamp的参数就是几行省略号的参数*/
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 很多时候我们的盒子不够用文字会超出盒子的范围
+    这时我们需要用到文本溢出 单行文本溢出省略号代替三部曲 -->
+    <div>
+        <p class="one">我是张宇来自新加坡,My name is zhangyu ,Come from XINGAPO</p>
+    </div>
+    <!-- 多行文本溢出 -->
+    <div>
+        <p class="two">我是张宇来自新加坡,My name is zhangyu ,Come from XINGAPO 我是张宇来自新加坡,My name is zhangyu ,Come from XINGAPO
+        </p>
+    </div>
+</body>
+
+</html>

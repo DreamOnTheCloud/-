@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*京东的初始化
+        打开京东官网右击鼠标查看源代码
+        找到link标签点击去ctrl + f 输入body查找
+        负值下面的内容
+        */
+        
+        * {
+            /*内外边距不用多说了吧*/
+            margin: 0;
+            padding: 0
+        }
+        
+        em,
+        i {
+            /*斜体矫正font-style:normal*/
+            font-style: normal
+        }
+        
+        li {
+            /*去除li标签的小圆点*/
+            list-style: none
+        }
+        
+        img {
+            /* 图片边框为0，图片后的文字为居中显示 */
+            border: 0;
+            vertical-align: middle
+        }
+        
+        button {
+            /*鼠标移动到按钮的话自动变成小手*/
+            cursor: pointer
+        }
+        
+        a {
+            /*设置超链接a标签的颜色和去除下划线*/
+            color: #666;
+            text-decoration: none
+        }
+        
+        a:hover {
+            /*所有的超链接鼠标移动颜色*/
+            color: #c81623
+        }
+        
+        button,
+        input {
+            /* 表单和按钮的字体样式 */
+            font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif
+        }
+        
+        body {
+            /* body内容的盒子设置 第一个是文字放大抗锯齿
+            背景颜色 字体设置 */
+            -webkit-font-smoothing: antialiased;
+            background-color: #fff;
+            font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+            color: #666
+        }
+        
+        .hide,
+        .none {
+            /*默认不显示的元素,触发显示才会显示*/
+            display: none
+        }
+        
+        .clearfix:after {
+            /*清除浮动*/
+            visibility: hidden;
+            clear: both;
+            display: block;
+            content: ".";
+            height: 0
+        }
+        
+        .clearfix {
+            *zoom: 1
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

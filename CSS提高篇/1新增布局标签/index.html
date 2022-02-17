@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newAdd</title>
+    <style>
+        header,
+        nav {
+            /*头部导航栏部分*/
+            width: 1400px;
+            height: 100px;
+            background-color: brown;
+            margin: 15px auto;
+            text-align: center;
+            font: 400 25px/3 '微软雅黑';
+        }
+        
+        article {
+            /* 内容部分 */
+            width: 1200px;
+            height: 300px;
+            background-color: aquamarine;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        article .left {
+            /* 内容左侧边栏 */
+            float: left;
+            background-color: bisque;
+            height: 100%;
+            width: 600px;
+        }
+        
+        section {
+            /* 区域部分 */
+            width: 1200px;
+            height: 300px;
+            background-color: blueviolet;
+            margin: 15px auto;
+        }
+        
+        footer {
+            /* 尾部部分 */
+            width: 100%;
+            height: 50px;
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 我们最开始学习的前端css都是用div来布局的(万物皆可div) 
+    可是那样的话对于搜索引擎不友好,于是新增了一些布局的标签
+    1:<header></header>头部标签
+    2:<nav></nav>导航栏标签
+    3:<article></article>内容标签
+    4:<sectionk></sectionk>区域内容(相当于大号的div)
+    2:<aside></aside>侧边栏标签
+    2:<footer></footer>尾部标签-->
+    <header>头部标签</header>
+    <nav>导航栏标签</nav>
+    <article>
+        <aside class="left">区域内容</aside>
+        <aside>侧边栏标签</aside>
+    </article>
+    <section>区域内容</section>
+    <footer>尾部标签--</footer>
+</body>
+
+</html>
