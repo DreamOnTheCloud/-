@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //定义一个函数,里面有三个参数两个数值一个函数作为参数
+        var fn = function(num1, num2, fn1) {
+            //返回值为里面回调函数的参数所做出的操作
+            return fn1(num1, num2)
+        }
+        console.log(fn(10, 20, (a, b) => {
+            return a + b
+        }));
+
+
+        //回调函数里面的参数就是上面的大函数里的参数名字必须一致
+        var intruduction = function(num, num2, num3, add) {
+                return add(num, num2, num3)
+            }
+            //输出是先给大函数的前几个参数赋值最后给回调函数选择做出的操作
+        console.log(intruduction('张宇', '马雨涵', 5, (a, b, c) => {
+            return a + '爱' + b + c
+        }));
+
+        //假定一个(回调函数)里面的参数设置为前面的参数
+        //决定了前面的两个值想做的操作回调函数的其中一个作用
+        function count(number, number2, callback) {
+            return callback(number, number2)
+        }
+
+        //定义回调函数充当我们之前假定的那个回调函数
+        function plus(a, b) {
+            return a * b
+        }
+        console.log(count(10, 5, plus));
+
+
+        //定义正常函数
+        var just = function(a, b, c) {
+                //c就是我们的回调函数,里面的参数a，b代表我们上面正常函数的a，b
+                return c(a, b) //返回值一定要定义为回调函数的参数值
+            }
+            //定义回调函数
+        function callback(c, d) {
+            return c / d
+        }
+        //调用函数并将回调函数的值传进去
+        console.log(just(10, 2, callback));
+
+
+        /*
+        【回调函数】
+            1,定义正常函数,里面的参数值有一个也是函数(作为参数的函数就是回调函数)
+            2,在正常函数里retuen:回调函数,将里面的参数设置为正常函数里的前面的正常参数
+            3,回调函数的参数 = 正常函数的参数
+            4,定义回调函数根据需求写,写完在调用正常函数时将定义的回调函数也传进去即可
+            5,回调函数在定义时参数做出的动作也就是我们正常参数所做的动作
+            6,动作可以在回调函数里随意更换,做出多组动作  
+        */
+
+        //定义正常函数
+        var sum = function(arr, callback) {
+            return callback(arr)
+        }
+
+        //定义回调函数目的:求一个数组的和与平均值
+        var call = function(arr) {
+            var sum = 0
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i]
+            }
+            return sum / arr.length
+        }
+        console.log(sum([20, 2, 2, 2, 2, 2, 2], call));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

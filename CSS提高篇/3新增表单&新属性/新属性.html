@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单的一些新属性很好用的</title>
+    <style>
+        input {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        required表单内容不可为空否则无法提交
+        placeholder表单里的默认信息
+        autofocus加载完成自动聚焦到表单框
+        autocomplete = off/on是否记录提交信息
+        multiple针对文件提交多个文件使用
+    -->
+    <table>
+        <tr>
+            <td>
+                <!-- required表单内容不可为空否则无法提交 -->
+                <input type="text" required="required">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- placeholder表单里的默认信息 -->
+                <input type="search" placeholder="搜索张宇">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- autofocus加载完成自动聚焦到表单框 -->
+                <input type="text" autofocus>
+            </td>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>

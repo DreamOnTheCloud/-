@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*注意我们的属性选择器的权重为10 加上前面的一个标签选择器为11*/
+        
+        div[class^=icon] {
+            /*属性选择器 标签[属性^=...]表示该属性 "前" 几个值相同的*/
+            color: red;
+        }
+        
+        section[class$=date] {
+            /*属性选择器 标签[属性$=...]表示该属性 "后" 几个值相同的*/
+            color: greenyellow;
+        }
+        
+        div.icon1 {
+            /*直接.icon1改权重为10,但是上面的权重为11改不了前面加上div才能改变*/
+            color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!--以..开头的
+        我要把它们全部设置为红色-->
+    <div class="icon1">小图标1</div>
+    <div class="icon2">小图标2</div>
+    <div class="icon3">小图标3</div>
+    <div class="icon4">小图标4</div>
+    <div class="icon5">小图标5</div>
+    <div class="打酱油">打酱油的</div>
+
+    <!--以..结尾的
+        我要把它们全部设置为绿色-->
+    <section class="icon1-date">我是哥斯拉</section>
+    <section class="icon2-date">她是安其拉</section>
+    <section class="icon3-666">你是傻瓜 </section>
+</body>
+
+</html>

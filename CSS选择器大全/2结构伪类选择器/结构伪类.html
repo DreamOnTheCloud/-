@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*格式:父标签 要改变的标签:筛选条件*/
+        
+        ul li:first-child {
+            /*结构伪类选择器选择第一个孩子*/
+            color: aqua;
+        }
+        
+        ul li:last-child {
+            /*结构伪类选择器选择最后的孩子*/
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 常用于根据父选择器选择儿子 -->
+    <div class="content">
+        <ul>
+            <li>我们都是小li</li>
+            <li>我们都是小li</li>
+            <li>我们都是小li</li>
+            <li>我们都是小li</li>
+            <li>我们都是小li</li>
+            <li>我们都是小li</li>
+            <li>我们都是小li</li>
+            <li>我们都是小li</li>
+        </ul>
+    </div>
+</body>
+
+</html>

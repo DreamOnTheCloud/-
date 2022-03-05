@@ -101,9 +101,12 @@ li {
     float: right;
     margin-right: 40px;
     height: 42px;
-    line-height: 42px;
     font-size: 14px;
     color: #666;
+}
+
+.user img {
+    vertical-align: middle;
 }
 
 
