@@ -7,236 +7,237 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redmi</title>
     <style>
+        /*用到的大于号是子元素选择器*/
+        
         * {
             margin: 0;
             padding: 0;
         }
-
+        
         body {
             background-color: #f0f0f0;
         }
-
+        
         .father {
             width: 1231px;
             height: 608px;
             margin: 150px auto;
         }
-
+        
         .left {
             float: left;
             width: 235px;
             height: 608px;
             background: #ffffff url(images/leftlog.png) no-repeat center 280px;
         }
-
+        
         .left>h1 {
             margin: 90px 60px 15px 30px;
             font-size: 54px;
-
         }
-
+        
         .left>span {
             margin: 0 60px 0 30px;
             font: 600 12px '宋体';
             letter-spacing: 3px;
         }
-
+        
         .right>div {
             float: left;
             width: 235px;
             height: 298px;
             margin: 0 0 12px 14px;
         }
-
+        
         .right .viewone {
             background: #ffffff url(images/view1.png) no-repeat center 33px;
         }
-
+        
         .viewone>.jieshao {
             margin-top: 195px;
             font: 400 13px '微软雅黑';
             padding: 0 70px;
         }
-
+        
         .viewone>span {
             font: 400 11px '微软雅黑';
             padding: 0 33px;
             color: #c2c2c2;
         }
-
+        
         .viewone>.money {
             margin-top: 20px;
             padding: 0 85px;
             font: 530 13px '微软雅黑';
             color: darkorange;
         }
-
+        
         .right .viewtwo {
             background: #ffffff url(images/view4.png) no-repeat center 33px;
         }
-
+        
         .viewtwo>.jieshao {
             margin-top: 195px;
             font: 400 13px '微软雅黑';
             padding: 0 50px;
         }
-
+        
         .viewtwo>span {
             font: 400 11px '微软雅黑';
             margin-left: 53px;
             color: #c2c2c2;
         }
-
+        
         .viewtwo>.money {
             margin-top: 20px;
             padding: 0 85px;
             font: 530 13px '微软雅黑';
             color: darkorange;
         }
-
+        
         .right .viewthree {
             background: #ffffff url(images/view3.png) no-repeat center 33px;
         }
-
+        
         .viewthree>.jieshao {
             margin-top: 195px;
             font: 400 13px '微软雅黑';
             padding: 0 83px;
         }
-
+        
         .viewthree>span {
             font: 400 11px '微软雅黑';
             margin-left: 60px;
             color: #c2c2c2;
         }
-
+        
         .viewthree>.money {
             margin-top: 20px;
             padding: 0 85px;
             font: 530 13px '微软雅黑';
             color: darkorange;
         }
-
+        
         .right .viewfour {
             background: #ffffff url(images/view6.png) no-repeat center 33px;
         }
-
+        
         .viewfour>.jieshao {
             margin-top: 195px;
             font: 400 13px '微软雅黑';
             padding: 0 58px;
         }
-
+        
         .viewfour>span {
             font: 400 11px '微软雅黑';
             margin-left: 58px;
             color: #c2c2c2;
         }
-
+        
         .viewfour>.money {
             margin-top: 20px;
             padding: 0 85px;
             font: 530 13px '微软雅黑';
             color: #ff8a3b;
         }
-
+        
         .right .viewfive {
             background: #ffffff url(images/view7.png) no-repeat center 33px;
         }
-
+        
         .viewfive>.jieshao {
             margin-top: 195px;
             font: 400 13px '微软雅黑';
             padding: 0 58px;
         }
-
+        
         .viewfive>span {
             font: 400 11px '微软雅黑';
             margin-left: 65px;
             color: #c2c2c2;
         }
-
+        
         .viewfive>.money {
             margin-top: 20px;
             padding: 0 85px;
             font: 530 13px '微软雅黑';
             color: darkorange;
         }
-
+        
         .right .viewsix {
             background: #ffffff url(images/view8.png) no-repeat center 33px;
         }
-
+        
         .viewsix>.jieshao {
             margin-top: 195px;
             font: 400 13px '微软雅黑';
             padding: 0 55px;
         }
-
+        
         .viewsix>span {
             font: 400 11px '微软雅黑';
             margin-left: 55px;
             color: #c2c2c2;
         }
-
+        
         .viewsix>.money {
             margin-top: 20px;
             padding: 0 85px;
             font: 530 13px '微软雅黑';
             color: darkorange;
         }
-
+        
         .right .viewseven {
             background: #ffffff url(images/view2.png) no-repeat center 33px;
             text-underline-position: auto;
         }
-
+        
         .viewseven>.jieshao {
             margin-top: 195px;
             font: 400 13px '微软雅黑';
             padding: 0 72px;
         }
-
+        
         .viewseven>span {
             font: 400 11px '微软雅黑';
             margin-left: 72px;
             color: #c2c2c2;
         }
-
+        
         .viewseven>.money {
             margin-top: 20px;
             padding: 0 85px;
             font: 530 13px '微软雅黑';
             color: darkorange;
         }
-
+        
         .right .vieweight {
             background: #ffffff url(images/view5.png) no-repeat center 33px;
         }
-
+        
         .vieweight>.jieshao {
             margin-top: 195px;
             font: 400 13px '微软雅黑';
             padding: 0 90px;
         }
-
+        
         .vieweight>span {
             font: 400 11px '微软雅黑';
             margin-left: 65px;
             color: #c2c2c2;
         }
-
+        
         .vieweight>.money {
             margin-top: 20px;
             padding: 0 85px;
             font: 530 13px '微软雅黑';
             color: darkorange;
         }
-
+        
         .father .right div:hover {
             box-shadow: 3px 5px 4px 2px black;
         }
-
+        
         .father .left:hover {
             box-shadow: 3px 5px 4px 2px rgb(146, 48, 48);
         }

@@ -7,40 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
+        .box {
+            width: 800px;
+            height: 500px;
+            background-color: aquamarine;
+            margin: 0 auto;
         }
-
-        .father {
-            /*父级盒子必是标准流*/
-            width: 1220px;
-            height: 460px;
-            margin: 200px auto;
-        }
-
-        .father .one {
-            /*两个子盒子是浮动*/
+        
+        .pic {
+            width: 100%;
+            height: 500px;
             float: left;
-            width: 230px;
-            height: 460px;
-            background-color: rgb(131, 143, 146);
         }
-
-        .father .two {
-            /*浮动*/
-            float: left;
-            width: 990px;
-            height: 460px;
-            background-color: rgb(184, 158, 42);
+        
+        .pic img {
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 
 <body>
-    <div class="father">
-        <div class="one"></div>
-        <div class="two"></div>
+    <div class="box">
+        <div class="pic">
+            <img src="../CSS基础篇/案例6淘宝焦点图/images/tb-promo.png" alt="">
+        </div>
     </div>
 </body>
 
